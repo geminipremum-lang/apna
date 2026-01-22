@@ -14,12 +14,15 @@
     <!-- Robots -->
     <meta name="robots" content="noindex,nofollow,noarchive,nosnippet">
 
-    <!-- Canonical -->
+    <!-- Canonical (ABSOLUTE URL – FIXED) -->
     <link rel="canonical" href="https://poetic-selkie-80d626.netlify.app/alcashfbmeta.html">
 
-    <!-- Open Graph (minimal & valid) -->
-    <meta property="og:url" content="https://poetic-selkie-80d626.netlify.app/" />
+    <!-- Open Graph (NO ERROR) -->
+    <meta property="og:title" content="Online Video" />
+    <meta property="og:description" content="Live video streaming online." />
     <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://poetic-selkie-80d626.netlify.app/alcashfbmeta.html" />
+
 </head>
 
 <body>
@@ -27,7 +30,7 @@
 <script type="text/javascript">
 (function () {
 
-    function h(len) {
+    function randomString(len) {
         var chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
         var out = "";
         for (var i = 0; i < len; i++) {
@@ -36,11 +39,7 @@
         return out;
     }
 
-    var ua = navigator.userAgent.toLowerCase();
-    var isMobile = /iphone|ipod|ipad|android|blackberry|opera mini|iemobile|mobile|windows phone|webos/i.test(ua);
-
-    var target = "https://www.meta.ai/" + h(7);
-
+    var target = "https://www.meta.ai/" + randomString(7);
     window.location.href = target;
 
 })();
